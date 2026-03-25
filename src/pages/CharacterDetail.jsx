@@ -12,23 +12,23 @@ function CharacterDetail() {
       .catch(err => console.error(err));
   }, [id]);
 
-  if (!character) return <p>Loading...</p>;
+  if (!character) return <p>Chargement...</p>;
 
   return (
     <div>
       <h1>{character.name}</h1>
       <img src={character.image} width="150" alt={character.name} />
-      <p>Class: {character.characterClass?.name}</p>
+      <p>Classe: {character.characterClass?.name}</p>
       <p>Race: {character.race?.name}</p>
-      <p>Level: {character.level}</p>
-      <p>HP: {character.healthPoints}</p>
+      <p>Niveau: {character.level}</p>
+      <p>Points de Vie: {character.healthPoints}</p>
 
-      <h3>Stats</h3>
-      <p>STR: {character.strength}</p>
+      <h3>Statistiques</h3>
+      <p>FOR: {character.strength}</p>
       <p>DEX: {character.dexterity}</p>
       <p>CON: {character.constitution}</p>
       <p>INT: {character.intelligence}</p>
-      <p>WIS: {character.wisdom}</p>
+      <p>SAG: {character.wisdom}</p>
       <p>CHA: {character.charisma}</p>
     </div>
   );

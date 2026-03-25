@@ -22,8 +22,8 @@ function Characters() {
       });
   }, []);
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error loading data</p>;
+  if (loading) return <p>Chargement...</p>;
+  if (error) return <p>Erreur lors du chargement des données</p>;
 
   const filtered = characters.filter(c =>
     c.name.toLowerCase().includes(search.toLowerCase())
@@ -36,16 +36,16 @@ function Characters() {
 
   return (
     <div>
-      <h1>Characters</h1>
+      <h1>Personnages</h1>
 
       <input
-        placeholder="Search"
+        placeholder="Recherche"
         onChange={(e) => setSearch(e.target.value)}
       />
 
       <select onChange={(e) => setSort(e.target.value)}>
-        <option value="name">Sort by name</option>
-        <option value="level">Sort by level</option>
+        <option value="name">Trier par nom</option>
+        <option value="level">Trier par niveau</option>
       </select>
 
       {sorted.map(char => (

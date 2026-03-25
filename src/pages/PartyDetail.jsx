@@ -11,7 +11,7 @@ function PartyDetail() {
     api.get(`/parties/${id}`).then(res => setParty(res.data));
   }, [id]);
 
-  if (!party) return <p>Loading...</p>;
+  if (!party) return <p>Chargement...</p>;
 
   return (
     <div>

@@ -8,8 +8,8 @@ function App() {
   return (
     <BrowserRouter>
       <nav>
-        <Link to="/">Characters</Link> | 
-        <Link to="/parties">Parties</Link>
+        <Link to="/">Personnages</Link> | 
+        <Link to="/parties">Groupes</Link>
       </nav>
 
       <Routes>
