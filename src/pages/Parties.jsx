@@ -7,7 +7,7 @@ function Parties() {
 
   useEffect(() => {
     // Ajout de /v1 pour correspondre au ApiPartyController
-    api.get("/v1/parties").then(res => setParties(res.data));
+    api.get("/parties").then(res => setParties(res.data));
   }, []);
 
   // Correction de la condition (voir note plus bas)

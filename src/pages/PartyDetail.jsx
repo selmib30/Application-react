@@ -8,7 +8,7 @@ function PartyDetail() {
 
   useEffect(() => {
     // Ajout de /v1 ici aussi
-    api.get(`/v1/parties/${id}`).then(res => setParty(res.data));
+    api.get(`/parties/${id}`).then(res => setParty(res.data));
   }, [id]);
 
   if (!party) return <p>Loading...</p>;
