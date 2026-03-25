@@ -1,16 +1,48 @@
-# React + Vite
+# Hero Forge Front - Initialisation du projet
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend React (Vite) pour la gestion de personnages et de groupes.
 
-Currently, two official plugins are available:
+## Prerequis
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Node.js 20+ (recommande)
+- npm 10+ (fourni avec Node.js)
+- Un backend accessible sur `http://127.0.0.1:8000/api/v1`
 
-## React Compiler
+Verifier les versions :
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+node -v
+npm -v
+```
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Depuis la racine du projet :
+
+```bash
+npm install
+```
+
+## Lancement en local
+
+```bash
+npm run dev
+```
+
+Puis ouvrir l'URL affichee dans le terminal
+
+## Configuration API
+
+Le frontend utilise actuellement cette base URL :
+
+http://127.0.0.1:8000/api/v1
+
+
+Fichier concerne : `src/services/api.js`.
+
+## Routes de l'application
+
+- `/` : liste des personnages
+- `/characters/:id` : detail d'un personnage
+- `/parties` : liste des groupes
+- `/parties/:id` : detail d'un groupe
