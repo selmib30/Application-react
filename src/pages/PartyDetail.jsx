@@ -7,7 +7,8 @@ function PartyDetail() {
   const [party, setParty] = useState(null);
 
   useEffect(() => {
-    api.get(`/parties/${id}`).then(res => setParty(res.data));
+    // Ajout de /v1 ici aussi
+    api.get(`/v1/parties/${id}`).then(res => setParty(res.data));
   }, [id]);
 
   if (!party) return <p>Loading...</p>;
@@ -17,8 +18,9 @@ function PartyDetail() {
       <h1>{party.name}</h1>
       <p>{party.description}</p>
 
-      <h3>Members</h3>
-      {party.members.map(m => (
+      <h3>Membres</h3>
+      {/* CHANGEMENT ICI : party.characters au lieu de party.members */}
+      {party.characters.map(m => (
         <p key={m.id}>{m.name}</p>
       ))}
     </div>
